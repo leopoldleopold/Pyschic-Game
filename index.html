@@ -1,37 +1,50 @@
 <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-                        <title>Tim Fish in LIFE QUESTIONS</title>
-        </head>
-            <body>
-                <div class="container"><h1>Tim Fish in LIFE QUESTIONS</h1>
-                    <div class="outertim">
-                       
-                        <div class="gamescreen">
-                            <div id="wordgame">
-                                    <p> <div id="nar">This is Tim! Tim is a fish! Press the computer and guess what letter he is thinking of!</div>
-                                        
-                                    </p>                                
-                                    </div>
-                                    <div id="userGuess"></div>
-                                </div>
-                            </div>
-                            <button onclick="beginGame()">ON</button>
-                            
-                            <div id="keyboard">
-                            <p> Score: <div id="correct"></div> </p>
-                                <p> Tries: <div id="incorrect"></div>  </p>
-                            </div>                   
-                        </div>
-                <div class="mousecase">
-                    <div id="mouse"></div>
-                    <div id="case">TIM FISH IN LIFE QUESTIONS by Ceba</div>
-                    <div id="tim"><img src = "assets/images/tim.png"></div>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>Tim Fish in LIFE QUESTIONS</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Tim Fish in LIFE QUESTIONS</h1>
+        <div class="outertim">
+            <div id="guessholder">Guesses:
+                <div id="guesses"></div>
+            </div>
+            <div class="gamescreen">
+                <div id="wordgame">
+                    <p>
+                        <div id="nar">This is Tim! Tim is a fish!
+                            Press the computer and guess what letter he is
+                            thinking of!</div>
+                    </p>
                 </div>
-                <footer>
-                <script src="assets/javascript/letter.js"></script>
-            </body>
-    </html>
+                <div id="userguess">Current Guess:
+                    <div id="user"></div>
+                </div>
+            </div>
+        </div>
+        <button onclick="initGame()">ON</button>
+        <div id="keyboard">
+            <p> Score:
+                <div id="correct"></div>
+            </p>
+            <p> Tries:
+                <div id="incorrect"></div>
+            </p>
+        </div>
+    </div>
+    <div class="mousecase">
+        <div id="mouse"></div>
+        <div id="case">TIM FISH IN LIFE QUESTIONS by Ceba</div>
+        <div id="tim"><img src="assets/images/tim.png"></div>
+    </div>
+    <footer>
+        <script src="assets/javascript/letter.js"></script>
+</body>
+
+</html>
