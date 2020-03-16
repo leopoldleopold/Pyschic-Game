@@ -4,7 +4,7 @@ var dictionary = ["a", "b", "c", "d", "e", "f", "g",
     "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 //constant variables
 var correct = 0;
-var incorrect = 7;
+var incorrect = 10;
 var guesses = [];
 // game function
 function initGame() {
@@ -24,7 +24,7 @@ function initGame() {
         else if (incorrect === 0) {
             document.getElementById("nar").innerHTML = "Tim is displeased by " +
                 "your failure and grants you additional tries!";
-            reset();
+                setTimeout(function(){ reset(); }, 1000);
         }
         // if guess is incorrect
         else if (guess != rndm) {
@@ -44,7 +44,7 @@ function initGame() {
 };
 // function to reset user tries and empty guess array
 function reset() {
-    incorrect = 7;
+    incorrect = 10;
     guesses = [];
     initGame();
 };
