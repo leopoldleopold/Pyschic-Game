@@ -8,9 +8,10 @@ var incorrect = 10;
 var guesses = [];
 // game function
 function initGame() {
-    document.getElementById("nar").innerHTML = "AND GUESS!";
+    document.getElementById("nar").innerHTML = "AND GUESS A LETTER! GOOD LUCK!";
     // random letter 
     var rndm = dictionary[Math.floor(Math.random() * dictionary.length)];
+    console.log(rndm);
     document.onkeyup = function (event) {
         var guess = event.key.toLowerCase();
         // guess is correct
@@ -18,13 +19,13 @@ function initGame() {
             correct++;
             document.getElementById("nar").innerHTML = "Tim is pleased by your " +
                 "esp abilities!";
-            reset();
+                setTimeout(function(){reset();}, 2500);
         }
         // if user runs out of guesses
         else if (incorrect === 0) {
             document.getElementById("nar").innerHTML = "Tim is displeased by " +
                 "your failure and grants you additional tries!";
-                setTimeout(function(){ reset(); }, 1000);
+                setTimeout(function(){ reset(); }, 2500);
         }
         // if guess is incorrect
         else if (guess != rndm) {
