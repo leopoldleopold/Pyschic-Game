@@ -11,7 +11,6 @@ function initGame() {
     document.getElementById("nar").innerHTML = "AND GUESS A LETTER! GOOD LUCK!";
     // random letter 
     var rndm = dictionary[Math.floor(Math.random() * dictionary.length)];
-    console.log(rndm);
     document.onkeyup = function (event) {
         var guess = event.key.toLowerCase();
         // guess is correct
